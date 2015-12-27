@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for mbsync channel
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Unit=mbsync@%i.service
+
+[Install]
+WantedBy=timers.service

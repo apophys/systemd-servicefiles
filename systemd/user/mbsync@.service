@@ -1,0 +1,8 @@
+[Unit]
+Description=Synchronization of a mbsync channel %i
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mbsync "%i"
+ExecStartPost=/usr/bin/notmuch new
+StandardError=null
