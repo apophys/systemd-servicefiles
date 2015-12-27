@@ -1,0 +1,11 @@
+[Unit]
+Description=syndaemon for synaptics
+
+[Service]
+Type=forking
+PIDFile=%t/syndaemon.pid
+ExecStart=/usr/bin/syndaemon -d -i 1.5 -p %t/syndaemon.pid
+Restart=always
+
+[Install]
+WantedBy=default.target
